@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <Studentdetails>
+  <student>
+    <name>Aswin</name>
+    <rollno>ES20CS01</rollno>
+    <dept>CSE</dept>
+    <age>20</age>
+    <email>aswin@gmail.com</email>
+    <mno>12345678</mno>
+  </student>
+  <student>
+    <name>Naveen</name>
+    <rollno>ES20CS02</rollno>
+    <dept>CSE</dept>
+    <age>20</age>
+    <email>naveen@gmail.com</email>
+    <mno>123425568</mno>
+  </student>
+  <student>
+    <name>Raj</name>
+    <rollno>ES20CS03</rollno>
+    <dept>CSE</dept>
+    <age>20</age>
+    <email>raj@gmail.com</email>
+    <mno>7986986962</mno>
+  </student>
+</Studentdetails>

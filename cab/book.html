@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOKING PAGE</title>
+    <link rel="stylesheet" href="book.css?Vm<?php echo time(); ?>" />
+  </head>
+  <body>
+    <form id="form" action="book.php" method="post">
+      <h1>BOOK YOUR CAB</h1>
+      <label>Enter the Car Number</label>
+      <input
+        type="text"
+        name="cn"
+        placeholder="Enter the car number you want "
+      />
+      <label>NAME</label>
+      <input
+        type="text"
+        id="txt"
+        name="cname"
+        placeholder="Enter Your Username"
+      />
+      <small id="un"></small>
+      <label>EMAIL</label>
+      <input type="email" id="email" name="email" placeholder="abc@gmail.com" />
+      <small id="em"></small>
+      <label>MOBILE NUMBER</label>
+      <input type="tel" id="no" name="no" placeholder="Enter Your Password" />
+      <small id="no1"></small>
+      <label>Bording Point</label>
+      <input
+        type="text"
+        id="bp"
+        name="bpoint"
+        placeholder="Enter Your Bording Point"
+      />
+      <label>Destination</label>
+      <input
+        type="Destination"
+        id="ds"
+        name="des"
+        placeholder="Enter Your Destination"
+      />
+      <button type="submit" name="sub">Book</button>
+    </form>
+  </body>
+  <!-- <script>
+    const form = document.getElementById("form");
+    const username = document.getElementById("txt");
+    const email = document.getElementById("email");
+    const mobile = document.getElementById("no");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      checkDetails();
+    });
+
+    function checkDetails() {
+      const usernameValue = username.value.trim();
+      const emailValue = email.value.trim();
+      const mno = mobile.value.trim();
+
+      if (usernameValue === "") {
+        document.getElementById("un").innerHTML = "Name cannot empty!";
+        document.getElementById("txt").style.borderBottomColor = "#ff0000";
+      } else {
+        document.getElementById("un").innerHTML = "";
+        document.getElementById("txt").style.borderBottomColor = "whitesmoke";
+      }
+      if (emailValue === "") {
+        document.getElementById("em").innerHTML = "Email cannot empty!";
+        document.getElementById("email").style.borderBottomColor = "#ff0000";
+      } else {
+        document.getElementById("em").innerHTML = "";
+        document.getElementById("email").style.borderBottomColor = "whitesmoke";
+      }
+
+      var len = /^[6-9]\d{9}$/;
+      if (mno === "") {
+        document.getElementById("no1").innerHTML = "Enter Your Number";
+        document.getElementById("no").style.borderBottomColor = "#ff0000";
+      } else if (mno.length > 10 || mno.length < 10) {
+        document.getElementById("no1").innerHTML = "Enter valid number";
+        document.getElementById("no").style.borderBottomColor = "#ff0000";
+      } else if (!len.test(mno)) {
+        document.getElementById("no1").innerHTML = "Enter valid number";
+        document.getElementById("no").style.borderBottomColor = "#ff0000";
+      } else {
+        document.getElementById("no1").innerHTML = "";
+        document.getElementById("no").style.borderBottomColor = "whitesmoke";
+      }
+    }
+  </script> -->
+</html>

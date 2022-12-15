@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 5px;
+    }
+  </style>
+  <body>
+    <h2>Student details</h2>
+
+    <input
+      type="text"
+      id="myInput"
+      onkeyup="myFunction()"
+      placeholder="Search"
+    />
+
+    <button type="button" onclick="loadXMLDoc()">Get Details</button>
+    <br /><br />
+    <table id="demo"></table>
+
+    <script>
+      function loadXMLDoc() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+          }
+        };
+        xmlhttp.open("GET", "sd_detail.xml", true);
+        xmlhttp.send();
+      }
+      function myFunction(xml) {
+        var i;
+        var xmlDoc = xml.responseXML;
+        var table =
+          "<tr><th>Name</th><th>Roll NO</th><th>Department</th></th><th>Age</th><th>Email</h></tr>";
+        var x = xmlDoc.getElementsByTagName("student");
+        for (i = 0; i < x.length; i++) {
+          table +=
+            "<tr><td>" +
+            x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("rollno")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("dept")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("age")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+        }
+        document.getElementById("demo").innerHTML = table;
+      }   </script>
+  </body>
+</html>
